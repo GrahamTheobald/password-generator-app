@@ -11,6 +11,7 @@
 			href="./assets/favicon-32x32.png"
 		/>
 		<link rel="stylesheet" href="./css/styles.css" />
+		<script src="./script/script.js" type="module"></script>
 
 		<title>Frontend Mentor | Password generator app</title>
 	</head>
@@ -18,65 +19,64 @@
 		<main>
 			<h1 class="title">Password Generator</h1>
 			<div class="result">
-				<p class="result__password">hjk323kjg</p>
+				<p class="result__password"></p>
 				<img
 					src="./assets/images/icon-copy.svg"
 					alt="copy"
 					class="result__copy"
 				/>
 			</div>
-	
-				<form class="form">
-					<div class="form__length-container">
-						<label for="length">Character Length</label>
-						<p class="form__length">10</p>
+			<form class="form">
+				<div class="form__length-container">
+					<label for="length">Character Length</label>
+					<p class="form__length">12</p>
+				</div>
+				<input id="length" type="range" value="12" min="4" max="20" />
+				<div class="form__item">
+					<div class="checkbox">
+						<img src="./assets/images/icon-check.svg" alt="check" />
+						<input id="uppercase" type="checkbox" />
 					</div>
-					<input id="length" type="range" value="10" min="1" max="20" />
-					<div class="form__item">
-						<div class="checkbox checked">
-							<img src="./assets/images/icon-check.svg" alt="check" />
-							<input id="uppercase" type="checkbox" checked />
-						</div>
-						<label for="uppercase">Include Uppercase Letters</label>
+					<label for="uppercase">Include Uppercase Letters</label>
+				</div>
+				<div class="form__item">
+					<div class="checkbox">
+						<img src="./assets/images/icon-check.svg" alt="check" />
+						<input id="lowercase" type="checkbox" />
 					</div>
-					<div class="form__item">
-						<div class="checkbox">
-							<img src="./assets/images/icon-check.svg" alt="check" />
-							<input id="lowercase" type="checkbox" />
-						</div>
-						<label for="lowercase">Include Lowercase Letters</label>
+					<label for="lowercase">Include Lowercase Letters</label>
+				</div>
+				<div class="form__item">
+					<div class="checkbox">
+						<img src="./assets/images/icon-check.svg" alt="check" />
+						<input id="numbers" type="checkbox" />
 					</div>
-					<div class="form__item">
-						<div class="checkbox">
-							<img src="./assets/images/icon-check.svg" alt="check" />
-							<input id="numbers" type="checkbox" />
-						</div>
-						<label for="numbers">Include Numbers</label>
+					<label for="numbers">Include Numbers</label>
+				</div>
+				<div class="form__item">
+					<div class="checkbox">
+						<img src="./assets/images/icon-check.svg" alt="check" />
+						<input id="symbols" type="checkbox" />
 					</div>
-					<div class="form__item">
-						<div class="checkbox">
-							<img src="./assets/images/icon-check.svg" alt="check" />
-							<input id="symbols" type="checkbox" />
-						</div>
-						<label for="symbols">Include Symbols</label>
-					</div>
-					<div class="form__strength-container">
-						<p class="label">Strength</p>
-						<div class="form__strength">
-							<p>MEDIUM</p>
-							<div class="strength__bars">
-								<div class="strength__bar full"></div>
-								<div class="strength__bar"></div>
-								<div class="strength__bar"></div>
-								<div class="strength__bar"></div>
-							</div>
+					<label for="symbols">Include Symbols</label>
+				</div>
+				<div class="form__strength-container">
+					<p class="label">Strength</p>
+					<div class="form__strength">
+						<p class="strength__text">MEDIUM</p>
+						<div class="strength__bars">
+							<div class="strength__bar full"></div>
+							<div class="strength__bar"></div>
+							<div class="strength__bar"></div>
+							<div class="strength__bar"></div>
 						</div>
 					</div>
-					<button class="form__submit" type="submit">
-						Generate
-						<img src="./assets/images/icon-arrow-right.svg" alt="arrow" />
-					</button>
-			</div>
+				</div>
+				<button class="form__submit" type="submit">
+					Generate
+					<img src="./assets/images/icon-arrow-right.svg" alt="arrow" />
+				</button>
+			</form>
 		</main>
 	</body>
 </html>
