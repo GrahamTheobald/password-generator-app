@@ -56,6 +56,9 @@ main {
 .result__password {
 	font-size: 1.5rem;
 }
+.result__copy:hover {
+	cursor: pointer;
+}
 
 .form {
 	display: flex;
