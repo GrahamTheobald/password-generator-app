@@ -1,0 +1,152 @@
+@import './fonts.css';
+@import './colors.css';
+@import './range.css';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--spacing: 1.5rem;
+	font-family: JetBrainsMono;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: var(--black);
+}
+
+main {
+	color: var(--white);
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing);
+	width: 28rem;
+	max-width: 95vw;
+}
+
+.title {
+	font-size: 1.3rem;
+	color: var(--gray-h);
+	text-align: center;
+}
+
+.result,
+.form {
+	background-color: var(--gray);
+	padding: var(--spacing);
+}
+
+.result {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.result__password {
+	font-size: 1.5rem;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	font-size: 0.9rem;
+}
+.form__length-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.form__length {
+	font-size: 1.5rem;
+	color: var(--green);
+}
+
+.form__item {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.form__strength-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem var(--spacing);
+	background-color: var(--black-b);
+	margin-block: 0.5rem;
+}
+.form__strength-container .label {
+	color: var(--gray-h);
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.form__strength {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+.form__submit {
+	border: none;
+	outline: none;
+	font-size: inherit;
+	font-family: inherit;
+	padding: 1rem var(--spacing);
+	text-transform: uppercase;
+	color: var(--gray);
+	background-color: var(--green);
+}
+.form__submit:hover {
+	cursor: pointer;
+}
+.strength__bars {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+.strength__bar {
+	height: 1.7rem;
+	width: 0.7rem;
+	border: 1px solid var(--white);
+}
+.strength__bar.full {
+	border-color: var(--yellow);
+	background-color: var(--yellow);
+}
+
+.checkbox {
+	border: 1px solid var(--white);
+	width: 1rem;
+	height: 1rem;
+	display: grid;
+	place-content: center;
+}
+.checkbox:hover {
+	cursor: pointer;
+}
+.checkbox.checked {
+	background-color: var(--green);
+}
+.checkbox input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.checkbox img {
+	display: none;
+}
+.checkbox.checked img {
+	display: block;
+}
