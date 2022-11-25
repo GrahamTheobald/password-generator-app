@@ -9,6 +9,7 @@ const numbers = document.querySelector('#numbers')
 const symbols = document.querySelector('#symbols')
 const length = document.querySelector('#length')
 
+const copy = document.querySelector('.result__copy')
 const submit = document.querySelector('.form__submit')
 const passwordDiv = document.querySelector('.result__password')
 
@@ -30,4 +31,12 @@ submit.addEventListener('click', (e) => {
 
 	const password = generatePassword(length.value, ...selections)
 	passwordDiv.innerText = password
+})
+
+copy.addEventListener('click', () => {
+	navigator.clipboard.writeText(passwordDiv.innerText)
+	copy.classList.add('copied')
+	setTimeout(() => {
+		copy.classList.remove('copied')
+	}, 3000)
 })

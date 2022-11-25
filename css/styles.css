@@ -59,6 +59,26 @@ main {
 .result__copy:hover {
 	cursor: pointer;
 }
+.result__copy {
+	position: relative;
+}
+.result__copy.copied::after {
+	content: 'Copied to Clipboard.';
+	position: absolute;
+	top: 0;
+	left: 0;
+	translate: 0 calc(-100% - 0.5rem);
+	animation: fade 2s linear forwards;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
 
 .form {
 	display: flex;
